@@ -27,4 +27,12 @@ export class PeopleListComponent implements OnInit {
     ]
   }
 
+  removePerson(person) {
+    this.people.forEach((val, idx) => {
+      if(val.name === person.name) {
+        this.people.splice(idx, 1);
+      }
+    });
+  }
+
 }
