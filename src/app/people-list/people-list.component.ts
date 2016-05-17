@@ -1,30 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
 import { PersonComponent } from '../person/person.component';
+import { PersonService } from '../core/person.service';
 
 @Component({
   moduleId: module.id,
   selector: 'people-list',
   directives: [PersonComponent],
-  templateUrl: 'people-list.component.html'
+  templateUrl: 'people-list.component.html',
+  providers: [ PersonService ]
 })
 export class PeopleListComponent implements OnInit {
   people: any[];
 
-  constructor() { }
+  constructor(private personService: PersonService) { }
 
   ngOnInit() {
-    this.people = [
-      {
-        name: 'Juri'
-      },
-      {
-        name: 'John'
-      },
-      {
-        name: 'Jack'
-      }
-    ]
+    this.people = this.personService.getAll();
   }
 
   removePerson(person) {
