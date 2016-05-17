@@ -1,1 +1,1 @@
-<person *ngFor="let p of people | async" [person]="p" (onDeletePerson)="removePerson($event)"></person>
+<person *ngFor="let p of people" [person]="p" (onDeletePerson)="removePerson($event)"></person>
