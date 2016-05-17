@@ -2,4 +2,9 @@
   {{title}}
 </h1>
 
-<people-list></people-list>
+<nav>
+  <a [routerLink]="['/people']">People</a>
+  <a [routerLink]="['/admin']">Admin</a>
+</nav>
+
+<router-outlet></router-outlet>
