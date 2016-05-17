@@ -1,5 +1,1 @@
-<ul>
-  <li *ngFor="let person of people">
-    {{ person.name }}
-  </li>
-</ul>
+<person *ngFor="let p of people" [person]="p"></person>
