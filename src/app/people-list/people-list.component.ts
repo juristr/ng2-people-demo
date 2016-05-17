@@ -16,12 +16,12 @@ export class PeopleListComponent implements OnInit {
   constructor(private personService: PersonService) { }
 
   ngOnInit() {
-    // this.people = this.personService.getAll();
-    this.personService
-      .getAll()
-      .subscribe(people => {
-        this.people = people;
-      })
+    this.people = this.personService.getAll();
+    // this.personService
+    //   .getAll()
+    //   .subscribe(people => {
+    //     this.people = people;
+    //   })
   }
 
   removePerson(person) {
